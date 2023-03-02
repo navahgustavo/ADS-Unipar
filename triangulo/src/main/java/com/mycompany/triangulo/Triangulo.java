@@ -5,16 +5,24 @@ import java.util.Scanner;
 public class Triangulo {
 
     public static void main(String[] args) {
-        int base, altura, area;
+        int base, altura;
+        double area;
         Scanner ler = new Scanner(System.in);
         
-        System.out.println("Informe o valor da base: ");
+        System.out.println("Informe o valor da base em cm: ");
         base = ler.nextInt();
-        System.out.println("Informe o valor da altura: ");
+        System.out.println("Informe o valor da altura em cm: ");
         altura = ler.nextInt();
         
         area = (base*altura)/2;
         
-        System.out.println("A área do triângulo é: "+area);
+        System.out.println("A área do triângulo em cm²: "+(int)area);
+        System.out.println("A área do triângulo em m²: "+area*0.01);
+        
+        if (area > 10) {
+            System.out.println("Hello World!");
+        } else {
+            System.out.println("...");
+        }
     }
 }
